@@ -1,0 +1,22 @@
+﻿Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Bryan Pham
+'04/22/2022
+'Call: NOR120-12620221330-0
+'Scope: Default Aftermarket for Order Sort so that they can filter it on Open SO dashboard
+
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+f.Intrinsic.Control.If(v.Caller.Hook,=,"11560")
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"N")
+	'99% of SOs are aftermarket part
+		v.Passed.000045.Set("Aftermarket")
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$bpham$}$20220506094806442$}$Di0riF4Q5RIv6jxva5zSWBaTvp+T0Dt6jKfOo+3JmO45QuUZoCCxpFvwwjVEQ4KeCT3irI2MAis=
+Program.Sub.Comments.End
